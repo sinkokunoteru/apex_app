@@ -30,5 +30,13 @@ Class apex_users extends Db{
     $sth->execute();
   }
 
+  public function find_all_users():Array{
+    $sql = 'SELECT * FROM users';
+    $sth = $this->dbh->prepare($sql);
+    $sth->execute();
+    $result = $sth->fetchALL(PDO::FETCH_ASSOC);
+    return $result;
+  }
+
 }
 ?>

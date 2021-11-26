@@ -2,7 +2,7 @@
 <html lang="ja">
  <head>
  <meta charset="utf-8">
- <title>サイトタイトル</title>
+ <title>login_form</title>
  <meta name="description" content="サイトキャプションを入力">
  <meta name="keywords" content="サイトキーワードを,で区切って入力">
  <link rel="stylesheet" href="sample.css">

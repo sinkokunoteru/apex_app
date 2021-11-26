@@ -26,9 +26,12 @@ class apex_users_controller{
 
   public function Login(){
     $user = $this->apex_users->login($this->request['post']);
-
     return $user;
   }
 
+  public function Find_all_users(){
+    $user = $this->apex_users->find_all_users();
+    return $user;
+  }
 }
 ?>
