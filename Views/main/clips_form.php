@@ -1,6 +1,5 @@
 
 <?php
-
 $youtube = $data = null;
 if (isset($_REQUEST["text"]) == true)
 {
@@ -60,9 +59,11 @@ div
 
 <body>
 <article>
-<form action="" method="post">
-<p>Youtube URLを入力してください。（共有URL、iframeにも対応）</p>
-<input name="text" type="text" value="<?php echo $data; ?>" style="width:90%;">
+<form action="clips_form_complete.php" method="post">
+<p>共有するYoutube URLを入力してください。</p>
+<input name="url" type="text" value="<?php echo $data; ?>" style="width:90%;">
+<p>一言コメント</p>
+<input name ="comment" type = "textarea" ><br><br>
 <input name="" type="submit">
 </form>
 

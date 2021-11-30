@@ -33,5 +33,14 @@ class apex_users_controller{
     $user = $this->apex_users->find_all_users();
     return $user;
   }
+
+  public function Clips_post(){
+    $this->apex_users->clips_post($this->request['post']);
+  }
+
+  public function Get_all_clips(){
+    $clips = $this->apex_users->get_all_clips();
+    return $clips;
+  }
 }
 ?>
