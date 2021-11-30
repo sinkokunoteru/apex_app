@@ -38,5 +38,22 @@ Class apex_users extends Db{
     return $result;
   }
 
+  public function clips_post($clip){
+    $sql = 'INSERT INTO clips(user_id,video_name,comment)';
+    $sql.= ' VALUES(:user_id,:video_name,:comment)';
+    $sth = $this->dbh->prepare($sql);
+    $sth->bindParam(':user_id',$clip['user_id']);
+    $sth->bindParam(':video_name',$clip['url']);
+    $sth->bindParam(':comment',$clip['comment']);
+    $sth->execute();
+  }
+  
+  public function get_all_clips():Array{
+    $sql = 'SELECT * FROM clips';
+    $sth = $this->dbh->prepare($sql);
+    $sth->execute();
+    $clips = $sth->fetchALL(PDO::FETCH_ASSOC);
+    return $clips;
+  }
 }
 ?>

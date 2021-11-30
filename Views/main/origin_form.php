@@ -1,7 +1,7 @@
 <?php
 //ヘッダー
 $header = array(
-    "TRN-Api-Key:cc9907f4-0c7e-463e-9c8c-88a24b7ff42b"
+    "TRN-Api-Key:e499870b-ec3e-44b7-9a83-1b985339b677"
 );
 
 if(isset($_POST["userid"])){

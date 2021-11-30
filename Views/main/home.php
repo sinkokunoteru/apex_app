@@ -25,7 +25,7 @@
 <?php foreach($users as $user): ?>
   <p><?= $user['name'] ?></p>
 <?php endforeach; ?>
-<a href=""></a>
+<a href="">
  <!----- フッター ----->
  <footer>フッター</footer>
  <!----- フッター END ----->
