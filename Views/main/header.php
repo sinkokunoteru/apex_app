@@ -25,7 +25,7 @@
     <li><a href="">概要</a></li>
     <li><a href="">特集</a></li>
     <li><a href="">アクセス</a></li>
-    <li><a href="">お問い合わせ</a></li>
+    <li><a href="logout.php">ログアウト</a></li>
   </ul>
 </nav>
 
