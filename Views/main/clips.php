@@ -1,8 +1,27 @@
 <?php
-require_once(ROOT_PATH.'Controllers/apex_users_controller.php');
-$con = new apex_users_controller();
-$clips = $con->Get_all_clips();
 
+$youtube = $data = null;
+if (isset($_REQUEST["text"]) == true)
+{
+	/** 入力内容を取得 */
+	$data = $youtube_url = $_REQUEST["text"];
+
+	/** ＨＴＭＬコードをエンティ */
+	$data = htmlspecialchars($data, ENT_QUOTES);
+
+	if (strpos($youtube_url, "watch") != false)	/* ページURL ? */
+	{
+		/** コード変換 */
+		$youtube_url = substr($youtube_url, (strpos($youtube_url, "=")+1));
+	}
+	else
+	{
+		/** 短縮URL用に変換 */
+		$youtube_url = substr($youtube_url, (strpos($youtube_url, "youtu.be/")+9));
+	}
+
+	$youtube = "<iframe width=\"100%\" height=\"400\" src=\"https://www.youtube.com/embed/${youtube_url}\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>";
+}
 ?>
 <!doctype html>
 <html>
@@ -33,11 +52,15 @@ div
 </head>
 
 <body>
-	<a href="clips_form.php">動画を投稿</a>
 <article>
-<?php foreach($clips as $youtube):  ?>
-	<div><?php echo $youtube['video_name']; ?></div>
-<?php endforeach; ?>
+<form action="" method="post">
+<p>Youtube URLを入力してください。（共有URLにも対応）</p>
+<input name="text" type="text" value="<?php echo $data; ?>" style="width:90%;">
+<input name="" type="submit">
+</form>
+
+<div><?php echo $youtube; ?></div>
+
 </article>
 </body>
 </html>

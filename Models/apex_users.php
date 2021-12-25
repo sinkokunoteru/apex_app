@@ -47,7 +47,7 @@ Class apex_users extends Db{
     $sth->bindParam(':comment',$clip['comment']);
     $sth->execute();
   }
-  
+
   public function get_all_clips():Array{
     $sql = 'SELECT * FROM clips';
     $sth = $this->dbh->prepare($sql);
