@@ -17,5 +17,5 @@ session_start();
 session_regenerate_id(true); // セッションIDをふりなおす
 $_SESSION['user_id'] = $users['id']; // ユーザーIDをセッション変数にセット
 
-header('Location: home.php') //ログイン成功したらホームへ
+header('Location: ../main/home.php') //ログイン成功したらホームへ
  ?>
