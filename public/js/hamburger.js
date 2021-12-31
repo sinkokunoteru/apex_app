@@ -1,7 +1,4 @@
-function hamburger() {
-  document.getElementById('nav').classList.toggle('in');
+function buttonClick() {
+  document.getElementById("nav").classList.toggle("nav");
 }
-
-document.getElementById('hamburger').addEventListener('click' , function () {
-  hamburger();
-} );
+document.body.onclick = buttonClick();
