@@ -19,7 +19,7 @@
 
  <body>
  <header>
-   <?php   include('header.php'); ?>
+   <?php   include(ROOT_PATH.'Views/design/header.php'); ?>
  </header>
  <nav>ナビ</nav>
 
@@ -29,7 +29,9 @@
 <?php endforeach; ?>
 <a href=""></a>
  <!----- フッター ----->
- <footer>フッター</footer>
+ <footer>
+   <?php include(ROOT_PATH.'Views/design/footer.php'); ?>
+ </footer>
  <!----- フッター END ----->
  </body>
 </html>

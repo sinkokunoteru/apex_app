@@ -22,8 +22,8 @@
  <h1>腕前が近い人とマッチングしよう</h1>
  <section>
  <h2></h2>
- <p><a href="sign_up.php">会員登録がまだの方はこちら</a></p>
- <p><a href="login.php">ログインはこちら</a></p>
+ <p><a href="../register/sign_up.php">会員登録がまだの方はこちら</a></p>
+ <p><a href="../register/login.php">ログインはこちら</a></p>
  </section>
  </article>
  <!----- メインコンテンツ END ----->
