@@ -1,0 +1,20 @@
+.main-profiel-block {
+  text-align: center;
+}
+.home-img-position {
+  margin-bottom: 10px;
+}
+.circle {
+  border-radius: 50%;
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+}
+.photo-bottom-user-information {
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: bold;
+}
+.photo-child-information{
+  margin-bottom:10px;
+}

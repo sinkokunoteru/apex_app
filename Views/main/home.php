@@ -12,7 +12,7 @@
  <title>apex-legends_home</title>
  <meta name="description" content="サイトキャプションを入力">
  <meta name="keywords" content="サイトキーワードを,で区切って入力">
- <link rel="stylesheet" href="sample.css">
+ <link rel="stylesheet" href="../css/home.css">
 
  <script src="sample.js"></script>
  </head>
@@ -27,6 +27,21 @@
   <p><?= $user['name'] ?></p>
   <p><?= $scripts->age_calculate($user['birth']) ?></p>
 <?php endforeach; ?>
+<div class="main-profiel-block">
+
+  <div class="home-img-position">
+    <img class="circle" src="../img/test.jpg">
+  </div>
+  <p class="photo-bottom-user-information">
+    名前が入ります、年齢が入ります
+  </p>
+  <p class="photo-child-information">ユーザーのランクが入ります</p>
+  <p class="photo-child-information">おおよその週にプレイする時間数が出ます</p>
+</div>
+
+<div class="like-button">
+
+</div>
 <a href=""></a>
  <!----- フッター ----->
  <footer>
