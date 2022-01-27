@@ -12,8 +12,8 @@
    <div class = "header_box">
      <div><a href="profiel.php"><img src ="../img/logo.jpg"></a></div>
      <div><a href="home.php">home</a></div>
-     <div><a href="clips.php">clips</a></div>
-     <div><a href="likes.php">likes</a></div>
+     <div><a href="../clips/clips.php">clips</a></div>
+     <div><a href="../likes/likes.php">likes</a></div>
      <div ><input type ="button" value ="三" onclick="buttonClick()"id="hamburger"></div>
    </div>
  </header>
