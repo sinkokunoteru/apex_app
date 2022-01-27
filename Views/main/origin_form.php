@@ -22,7 +22,7 @@ if(isset($_POST["userid"])){
 
     $response = curl_exec($ch);
     $profile = json_decode($response, true);
-
+    $filename = "../img/オクタン.jpg";
     curl_close($ch);
 }
 ?>
@@ -46,22 +46,30 @@ if(isset($_POST["userid"])){
         </form>
         <div>
             <?php
-                //出力
-                echo "name:";
+                echo $profile["data"]["metadata"]["activeLegendName"];
+                echo "<img src =".$filename.">";
+                echo "<br>";
                 echo $profile["data"]["platformInfo"]["platformUserId"];
                 echo "<br>";
-                echo "platform:";
-                echo $profile["data"]["platformInfo"]["platformSlug"];
-                echo "<br>";
-                echo "country:";
-                echo  $profile["data"]["userInfo"]["countryCode"];
-                echo "<br>";
-                echo "level:";
-                echo  $profile["data"]["segments"][0]["stats"]["level"]["displayValue"];
-                echo "<br>";
-                echo "rank:";
                 echo  $profile["data"]["segments"][0]["stats"]["rankScore"]["value"];
-                echo "<br>";
+                echo "<pre>";
+                var_dump ($profile);
+                //出力
+                // echo "name:";
+                // echo $profile["data"]["platformInfo"]["platformUserId"];
+                // echo "<br>";
+                // echo "platform:";
+                // echo $profile["data"]["platformInfo"]["platformSlug"];
+                // echo "<br>";
+                // echo "country:";
+                // echo  $profile["data"]["userInfo"]["countryCode"];
+                // echo "<br>";
+                // echo "level:";
+                // echo  $profile["data"]["segments"][0]["stats"]["level"]["displayValue"];
+                // echo "<br>";
+                // echo "rank:";
+                // echo  $profile["data"]["segments"][0]["stats"]["rankScore"]["value"];
+                // echo "<br>";
             ?>
         </div>
     </body>
