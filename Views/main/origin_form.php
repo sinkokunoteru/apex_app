@@ -46,9 +46,16 @@ if(isset($_POST["userid"])){
         </form>
         <div>
             <?php
+<<<<<<< HEAD
                 echo $profile["data"]["metadata"]["activeLegendName"];
                 echo "<img src =".$filename.">";
                 echo "<br>";
+=======
+              echo '<pre>';
+              var_dump($profile);
+                //出力
+                echo "name:";
+>>>>>>> f-20220115
                 echo $profile["data"]["platformInfo"]["platformUserId"];
                 echo "<br>";
                 echo  $profile["data"]["segments"][0]["stats"]["rankScore"]["value"];

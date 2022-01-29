@@ -10,10 +10,10 @@
 
  <header>
    <div class = "header_box">
-     <div><a href="profiel.php"><img src ="../img/logo.jpg"></a></div>
+     <div><a href="profiel.php"><img src ="../img/apex-logo-F74B0C9FCD-seeklogo.com.png"></a></div>
      <div><a href="home.php">home</a></div>
-     <div><a href="clips.php">clips</a></div>
-     <div><a href="likes.php">likes</a></div>
+     <div><a href="../clips/clips_form.php">clips</a></div>
+     <div><a href="../likes/likes.php">likes</a></div>
      <div ><input type ="button" value ="三" onclick="buttonClick()"id="hamburger"></div>
    </div>
  </header>
@@ -25,7 +25,7 @@
     <li><a href="">概要</a></li>
     <li><a href="">特集</a></li>
     <li><a href="">アクセス</a></li>
-    <li><a href="logout.php">ログアウト</a></li>
+    <li class=""><a href="../register/logout.php">ログアウト</a></li>
   </ul>
 </nav>
 

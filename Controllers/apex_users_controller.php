@@ -1,7 +1,7 @@
 <?php
 require_once(ROOT_PATH."/Models/apex_users.php");
 
-class apex_users_controller{
+class apex_users_controller {
   private $User;
   private $request;
 
@@ -34,13 +34,20 @@ class apex_users_controller{
     return $user;
   }
 
-  public function Clips_post(){
-    $this->apex_users->clips_post($this->request['post']);
+  public function Clips_post($clip_data){
+    $this->apex_users->clips_post($clip_data);
   }
 
   public function Get_all_clips(){
     $clips = $this->apex_users->get_all_clips();
     return $clips;
+  }
+
+  public function Get_myself_favorites(){}
+
+  public function Get_others_favorites(){
+    $other_favorites = $this->apex_users->get_other_favorites();
+    return $other_favorites;
   }
 }
 ?>
