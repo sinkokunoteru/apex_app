@@ -46,6 +46,8 @@ if(isset($_POST["userid"])){
         </form>
         <div>
             <?php
+              echo '<pre>';
+              var_dump($profile);
                 //出力
                 echo "name:";
                 echo $profile["data"]["platformInfo"]["platformUserId"];

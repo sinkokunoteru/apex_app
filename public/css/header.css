@@ -20,6 +20,13 @@ p{
   justify-content: space-around;
 }
 
+.header_box img{
+  position: relative;
+  top: 10px;
+  width: 30px;
+  height: 30px;
+}
+
 .header_box div a{
   position:absolute;
   top: 0px;
