@@ -1,30 +1,10 @@
 <?php
-//ヘッダー
-$header = array(
-    "TRN-Api-Key:cc9907f4-0c7e-463e-9c8c-88a24b7ff42b"
-);
+require_once(ROOT_PATH."/Controllers/origin_form_controller.php");
+$res = new origin_form_controller();
+$status = $res->get_apex_info();
+$rank = $status['profile']["data"]["segments"][0]["stats"]["rankScore"]["value"];
+$filename = $res->get_mostkiller($status['profile']);
 
-if(isset($_POST["userid"])){
-    //userid取得
-    $userid = rawurlencode($_POST['userid']);
-    //platform取得
-    $platform = $_POST['platform'];
-    //url
-    $url = "https://public-api.tracker.gg/v2/apex/standard/profile/";
-    $url .= $_POST['platform'].'/'.$_POST['userid'];
-
-    //user情報取得
-    $ch = curl_init();
-
-    curl_setopt($ch,CURLOPT_URL,$url);
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-    curl_setopt($ch, CURLOPT_HTTPHEADER, $header);
-
-    $response = curl_exec($ch);
-    $profile = json_decode($response, true);
-    $filename = "../img/オクタン.jpg";
-    curl_close($ch);
-}
 ?>
 <!DOCTYPE html>
 <html>
@@ -50,17 +30,18 @@ if(isset($_POST["userid"])){
                 echo $profile["data"]["metadata"]["activeLegendName"];
                 echo "<img src =".$filename.">";
                 echo "<br>";
-=======
-              echo '<pre>';
-              var_dump($profile);
-                //出力
-                echo "name:";
->>>>>>> f-20220115
                 echo $profile["data"]["platformInfo"]["platformUserId"];
+=======
+                echo $filename['name'];
+                // echo $status['profile']["data"]["metadata"]["activeLegendName"];
+                echo "<img src =".$filename['fileroot'].">";
                 echo "<br>";
-                echo  $profile["data"]["segments"][0]["stats"]["rankScore"]["value"];
+                echo $status['profile']["data"]["platformInfo"]["platformUserId"];
+>>>>>>> f-20220127_kawachi
+                echo "<br>";
+                echo  $rank;
                 echo "<pre>";
-                var_dump ($profile);
+                var_dump ($status['profile']);
                 //出力
                 // echo "name:";
                 // echo $profile["data"]["platformInfo"]["platformUserId"];
