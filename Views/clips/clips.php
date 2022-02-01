@@ -1,9 +1,6 @@
 <?php
   require_once(ROOT_PATH.'Controllers/apex_users_controller.php');
-  require_once(ROOT_PATH.'Controllers/apex_status.php');
   $con = new apex_users_controller();
-  $scripts = new apex_status();
-  $users = $con ->Find_all_users();
 ?>
 <!DOCTYPE html>
 <html lang="ja">
