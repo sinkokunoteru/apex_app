@@ -11,8 +11,8 @@
   </head>
   <body>
     <?php if( $img_data['up_ok'] ): ?>
-      <p>このファイルをアップロードしますか？ <img src="<?= $img_data['up_file'] ?>"> です。</p>
-      <a href="prof_complete.php">
+      <p>この画像に変更しますか？ <img src="<?='../img/'.basename($img_data['up_file']); ?>"></p>
+      <a href="profiel_complete.php">アップロード</a>
     <?php else: ?>
     <p>アップロードは失敗しました。</p>
       <a href="../">アップロードページへ戻る</a>

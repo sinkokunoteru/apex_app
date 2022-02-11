@@ -15,7 +15,7 @@
 			<p>Youtube URLを入力してください。（共有URLにも対応）</p>
 			<input name="post_url" type="text" value="" placeholder=" URLを入力" style="width:90%;">
 			<p>一言コメント</p>
-			<input name ="comment" type = "textarea" value="" placeholder=" コメントを入力してください" style="width:90%;"><br>
+			<input name ="comment" type = "textarea" value="" placeholder=" コメントを入力してください" row="10" style="width:90%;"><br>
 			<input name="" type="submit">
 		</form>
 	</article>

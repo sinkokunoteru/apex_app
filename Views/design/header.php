@@ -10,7 +10,7 @@
 
  <header>
    <div class = "header_box">
-     <div><a href="profiel.php"><img src ="../img/apex-logo-F74B0C9FCD-seeklogo.com.png"></a></div>
+     <div><a href="profiel.php"><img src ="../img/design_img/apex-logo-F74B0C9FCD-seeklogo.com.png"></a></div>
      <div><a href="http://localhost/main/home.php">home</a></div>
      <div><a href="../clips/clips_form.php">clips</a></div>
      <div><a href="../favorites/favorites.php">likes</a></div>
@@ -21,9 +21,9 @@
 
 <nav id="nav" class="nav">
   <ul>
-    <li><a href="">トップ</a></li>
+    <li><a href="/main/home.php">トップ</a></li>
     <li><a href="">概要</a></li>
-    <li><a href="">特集</a></li>
+    <li><a href="../profiel/profiel_main.php">プロフィール</a></li>
     <li><a href="">アクセス</a></li>
     <li class=""><a href="../register/logout.php">ログアウト</a></li>
   </ul>

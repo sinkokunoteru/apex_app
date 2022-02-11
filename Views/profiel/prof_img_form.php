@@ -5,27 +5,21 @@
    <title>apex_legends</title>
    <meta name="description" content="腕前が近い人間とマッチング">
    <meta name="keywords" content="apex,apex legends,fps,マッチング,アプリ">
-   <link rel="stylesheet" href="index.css">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+   <script src="../js/img_preview.js"></script>
  </head>
-
  <body>
-   <!----- ヘッダー ----->
-  <header>ヘッダー</header>
-  <nav>ナビ</nav>
-  <!----- ヘッダー END ----->
-
-  <!----- メインコンテンツ ----->
+  <header>
+    <?php   include(ROOT_PATH.'Views/design/header.php'); ?>
+  </header>
   <article>
-    <form method="post" action="prof_confirm.php" enctype="multipart/form-data" action="prof_confirm.php">
-      <p>アップロードする画像を選択</p>
-      <input type="file" name="up">
+    <form class="view_box" method="post" action="prof_confirm.php" enctype="multipart/form-data">
+      <input type="file" name="up" class="file">
       <input type="submit"value="アップロード">
     </form>
   </article>
-  <!----- メインコンテンツ END ----->
-
- <!----- フッター ----->
-  <footer>フッター</footer>
- <!----- フッター END ----->
+  <footer>
+    <?php include(ROOT_PATH.'Views/design/footer.php'); ?>
+  </footer>
  </body>
 </html>
