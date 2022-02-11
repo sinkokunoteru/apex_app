@@ -4,6 +4,8 @@ $res = new origin_form_controller();
 $status = $res->get_apex_info();
 $rank = $status['profile']["data"]["segments"][0]["stats"]["rankScore"]["value"];
 $filename = $res->get_mostkiller($status['profile']);
+$point = $res->calc_rankpoint($rank);
+$rank_path = $res->get_rank($point);
 
 ?>
 <!DOCTYPE html>
@@ -26,38 +28,17 @@ $filename = $res->get_mostkiller($status['profile']);
         </form>
         <div>
             <?php
-<<<<<<< HEAD
-                echo $profile["data"]["metadata"]["activeLegendName"];
-                echo "<img src =".$filename.">";
-                echo "<br>";
-                echo $profile["data"]["platformInfo"]["platformUserId"];
-=======
-                echo $filename['name'];
-                // echo $status['profile']["data"]["metadata"]["activeLegendName"];
-                echo "<img src =".$filename['fileroot'].">";
-                echo "<br>";
-                echo $status['profile']["data"]["platformInfo"]["platformUserId"];
->>>>>>> f-20220127_kawachi
-                echo "<br>";
-                echo  $rank;
-                echo "<pre>";
-                var_dump ($status['profile']);
-                //出力
-                // echo "name:";
-                // echo $profile["data"]["platformInfo"]["platformUserId"];
-                // echo "<br>";
-                // echo "platform:";
-                // echo $profile["data"]["platformInfo"]["platformSlug"];
-                // echo "<br>";
-                // echo "country:";
-                // echo  $profile["data"]["userInfo"]["countryCode"];
-                // echo "<br>";
-                // echo "level:";
-                // echo  $profile["data"]["segments"][0]["stats"]["level"]["displayValue"];
-                // echo "<br>";
-                // echo "rank:";
-                // echo  $profile["data"]["segments"][0]["stats"]["rankScore"]["value"];
-                // echo "<br>";
+              echo $status['profile']["data"]["platformInfo"]["platformUserId"];
+              echo "<br>";
+              echo "<img src =".$filename['fileroot'].">";
+              echo "<br>";
+              echo  $rank;
+              echo "<img src =".$rank_path.">";
+              echo "<br>";
+              // echo "aaaaaaaaaaaaa";
+              // echo "<pre>";
+              // var_dump ($status['profile']);
+
             ?>
         </div>
     </body>

@@ -62,5 +62,48 @@ class origin_form_controller{
     return $mostkiller;
   }
 
+  public function get_rank($str){
+    $rank = array("bronze1"=>"../img/ranklogs/bronze1.png","bronze2"=>"../img/ranklogs/bronze2.png","bronze3"=>"../img/ranklogs/bronze3.png",
+                  "bronze4"=>"../img/ranklogs/bronze4.png","silver1"=>"../img/ranklogs/silver1.png","silver2"=>"../img/ranklogs/silver2.png",
+                  "silver3"=>"../img/ranklogs/silver3.png","silver4"=>"../img/ranklogs/silver4.png","gold1"=>"../img/ranklogs/gold1.png",
+                  "gold2"=>"../img/ranklogs/gold2.png","gold3"=>"../img/ranklogs/gold3.png","gold4"=>"../img/ranklogs/gold4.png",
+                  "pratium1"=>"../img/ranklogs/pratium1.png","pratium2"=>"../img/ranklogs/pratium2.png","pratium3"=>"../img/ranklogs/pratium3.png",
+                  "pratium3"=>"../img/ranklogs/pratium3.png","pratium4"=>"../img/ranklogs/pratium4.png","dyamond1"=>"../img/ranklogs/dyamond1.png",
+                  "dyamond2"=>"../img/ranklogs/dyamond2.png","dyamond3"=>"../img/ranklogs/dyamond3.png","dyamond4"=>"../img/ranklogs/dyamond4.png",
+                  "master"=>"../img/ranklogs/master.png","predetor"=>"../img/ranklogs/predetor.png");
+    return $rank["$str"];
+  }
+
+  public function calc_rankpoint($point){
+
+    $rank_str = array("b3"=>"bronze3","b2"=>"bronze2","b1"=>"bronze1",
+                      "s4"=>"silver4","s3"=>"silver3","s2"=>"silver2","s1"=>"silver1",
+                      "g4"=>"gold4","g3"=>"gold3","g2"=>"gold2","g1"=>"gold1",
+                      "p4"=>"pratium4","p3"=>"pratium3","p2"=>"pratium2","p1"=>"pratium1",
+                      "d4"=>"dyamond4","d3"=>"dyamond3","d2"=>"dyamond2","d1"=>"dyamond1","m"=>"master");
+    $b3=300;$b2=600;$b1=900;
+    $s4=1200;$s3=1600;$s2=2000;$s1=2400;
+    $g4=2800;$g3=3300;$g2=3800;$g1=4300;
+    $p4=4800;$p3=5400;$p2=6000;$p1=6600;
+    $d4=7200;$d3=7900;$d2=8600;$d1=9300;$m=10000;
+    $rank_point = array($b3,$b2,$b1,$s4,$s3,$s2,$s1,$g4,$g3,$g2,$g1,$p4,$p3,$p2,$p1,$d4,$d3,$d2,$d1,$m);
+    $rank_point_str = array("b3","b2","b1","s4","s3","s2","s1","g4","g3","g2","g1","p4","p3","p2","p1","d4","d3","d2","d1","m");
+    $i = 0;
+    foreach($rank_point as $str){
+      if(isset($str)){
+        if($point < $b3){
+          $get_rank = "bronze4";
+        }
+        if($point>$str){
+          $get_rank = $rank_str[$rank_point_str["$i"]];
+          break;
+        }
+      }
+      $i ++;
+    }
+    return $get_rank;
+  }
+
+
 }
 ?>
