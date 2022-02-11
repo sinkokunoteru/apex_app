@@ -28,7 +28,7 @@
 <?php endforeach; ?>
 <div class="main-profiel-block">
   <div class="home-img-position">
-    <img class="circle" src="../img/test.jpg">
+    <img class="circle" src="../img/design_img/test.jpg">
   </div>
   <p class="photo-bottom-user-information">
     名前が入ります、年齢が入ります

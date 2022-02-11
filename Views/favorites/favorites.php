@@ -30,7 +30,7 @@
         <a href="user_prof.php">
           <div class="likes_bar">
             <div class="user-form">
-              <div><img src="../img/test.jpg"></div>
+              <div><img src="../img/design_img/test.jpg"></div>
               <div><p>コメントが入ります<p></div>
             </div>
           </div>
