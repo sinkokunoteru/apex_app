@@ -7,6 +7,7 @@ class img_controller {
     $ary_data['up_ok'] = false;
     $ary_data['tmp_file'] = isset($_FILES["up"]["tmp_name"]) ? $_FILES["up"]["tmp_name"] : "";
     $ary_data['org_file'] = isset($_FILES["up"]["name"])     ? $_FILES["up"]["name"]     : "";
+    $ary_data['img_path'] = "";
 
     //ファイルが正しくアップロードされたものかチェック
     if( $ary_data['tmp_file'] != "" && is_uploaded_file($ary_data['tmp_file'])) {
@@ -16,17 +17,27 @@ class img_controller {
       //拡張子が空でない 且つ 元ファイル名が拡張子名でない
       if( $ext != "" && $ext != $ary_data['org_file']) {
         //ファイルパスの生成（同名による保存回避のため乱数を付与）もしかしたらあとでハッシュ化するかも
-        $ary_data['up_file'] = ROOT_PATH."public/img/". date("Ymd_His.") . mt_rand(1000,9999) . ".$ext";
+        $ary_data['up_file'] = ROOT_PATH."public/img/user_profiel/". date("Ymd_His.") . mt_rand(1000,9999) . ".$ext";
         $ary_data['up_ok'] = move_uploaded_file( $ary_data['tmp_file'], $ary_data['up_file']);
+        //送信・保存するファイル名
+        $ary_data['img_path'] = '../img/user_profiel/'.basename($ary_data['up_file']);
       }else{
         //エラー処理を追加予定
-        echo "error";
+        echo "ただしい画像ファイルではありません";
       }
     }else{
       echo 'アップロードによるもの以外のファイルが送信されました';
       exit;
     }
+
     return $ary_data;
+  }
+
+  public function img_delete($user_profiel_image_path){
+    $delete_user_image_path = str_replace('..','',$user_profiel_image_path);
+    $delete_image = ROOT_PATH.'public'.$delete_user_image_path;
+    unlink($delete_image);
+
   }
 
   public function img_validate(){

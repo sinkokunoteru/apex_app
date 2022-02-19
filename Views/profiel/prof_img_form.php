@@ -1,3 +1,10 @@
+<?php
+  require_once(ROOT_PATH.'Controllers/image_controller.php');
+  $img = new img_controller();
+  if(isset($_POST['img_path'])){
+    $img->img_delete($_POST['img_path']);
+  }
+?>
 <!DOCTYPE html>
 <html lang="ja">
  <head>

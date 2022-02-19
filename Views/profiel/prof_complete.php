@@ -8,13 +8,10 @@
  </head>
 
  <body>
-   <!----- ヘッダー ----->
   <header>
     <?php   include(ROOT_PATH.'Views/design/header.php'); ?>
   </header>
-  <!----- ヘッダー END ----->
 
-  <!----- メインコンテンツ ----->
   <article>
     <p>プロフィール画像を変更しました。</p>
     <a href="/main/home.php">ホームに戻る</a>
