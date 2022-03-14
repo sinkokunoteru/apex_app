@@ -37,6 +37,35 @@ Class apex_users extends Db{
     $result = $sth->fetchALL(PDO::FETCH_ASSOC);
     return $result;
   }
+//プロフィール画像パスをデータ・ベースに登録
+  public function set_user_prof_img(){
+    $sql = 'INSERT INTO users(user_id,prof_img_path)';
+    $sql.= ' VALUES(:user_id,:user_prof_img)';
+    $sth = $this->dbh->prepare($sql);
+    $sth->bindParam(':user_id',$user_id);
+    $sth->bindParam(':prof_img_path',$img_path);
+    $sth->execute();
+  }
+
+//プロフィール画像パスを更新
+  public function update_user_prof_img(){
+    $sql = 'UPDATE users SET prof_img_path';
+    $sql = ' WHERE user_id = :user_id';
+    $sth = $this->dbh->prepare($sql);
+    $sth->bindParam(':user_id',$user_id);
+    $sth->execute();
+  }
+//プロフィール画像パスを出力
+  public function get_user_prof_img(){
+    $sql = 'SELECT prof_img_path FROM users';
+    $sql = ' WHERE user_id = :user_id';
+    $sth = $this->dbh->prepare($sql);
+    $sth->bindParam(':user_id',$user_id);
+    $sth->execute();
+    $prof_img_path = $sth->fetch(PDO::FETCH_ASSOC);
+    return $prof_img_path;
+  }
+
 //クリップの投稿
   public function clips_post($clip){
     $sql = 'INSERT INTO clips(user_id,video_name,comment)';
