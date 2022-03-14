@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+header {
+  height:80vh;
+  background-image: url(../img/design_img/dice.jpg);
+  background-size: cover;
+}
+
+.header_group {
+  display:flex;
+  color: white;
+  margin:0 10%;
+  justify-content: space-between;
+}
+
+.header_group li {
+  font-size: 30px;
+  font-family: 'Amatic SC', cursive;
+  margin:10px;
+}
+
+.title_word {
+  color:white;
+  position:relative;
+  width:0;
+  font-family: 'Amatic SC', cursive;
+  font-size: 50px;
+  top:300px;
+  left:10%;
+}
+
+.register_button {
+  background-color: white;
+  width:300px;
+  height:50px;
+  text-align: center;
+  border-radius: 2em;
+  position:relative;
+  left:37%;
+  top:350px;
+}
+
+.register_link {
+  color:black;
+  line-height: 50px;
+  text-decoration: none;
+  font-weight:bold;
+  font-size:20px;
+  font-family: 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro','メイリオ', 'Meiryo', '游ゴシック', 'Yu Gothic', 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+}
+
+.sample_user_info {
+  display:flex;
+}
+
+.text_block {
+  min-width:300px;
+  width:20%;
+  height: 300px;
+  border:solid 1px gray;
+  border-radius: 1em;
+  margin:20px;
+}
+
+#text_block_header {
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: underline;
+  margin:20px;
+}
+
+#text_contents {
+  word-break: break-all;
+  margin:20px;
+}
+
+.foot_information {
+  display:flex;
+  margin:5%;
+  justify-content: space-between;
+}
+
+
+.foot_information ul li {
+  margin:10px;
+  width:100%;
+}
+
+.info_top {
+  font-size: 19px;
+  font-weight: bold;
+}
+
+.foot_block {
+  width:96%;
+  margin-left:2%;
+}
+
+.information_line {
+  width:96%;
+  background-color:gray;
+  height:1px;
+  margin-left:2%;
+}
+
+.app_link {
+  margin:30px 20px;
+  font-weight: bold;
+}
+
+.information_detail {
+  font-size: 13px;
+  margin:10px;
+  color:gray;
+}
+
+.foot_link {
+  width:100%;
+  height:100px;
+  display:flex;
+  justify-content:center;
+}
+
+.foot_link p{
+  color: gray;
+  font-size:12px;
+  margin-top:30px;
+  margin:30px 0 15px 15px;
+  align-items: center;
+}
+
+.copy_right{
+  width:100%;
+  color:gray;
+  text-align: center;
+  margin-bottom:30px;
+}
+
+.copy_right p{
+  font-size:9px;
+}
