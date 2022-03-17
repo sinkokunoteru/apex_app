@@ -42,7 +42,7 @@ Class apex_users extends Db{
     $sql = 'INSERT INTO users(user_id,prof_img_path)';
     $sql.= ' VALUES(:user_id,:user_prof_img)';
     $sth = $this->dbh->prepare($sql);
-    $sth->bindParam(':user_id',$user_id);
+    $sth->bindParam(':user_id',$this->User);
     $sth->bindParam(':prof_img_path',$img_path);
     $sth->execute();
   }
@@ -52,7 +52,7 @@ Class apex_users extends Db{
     $sql = 'UPDATE users SET prof_img_path';
     $sql = ' WHERE user_id = :user_id';
     $sth = $this->dbh->prepare($sql);
-    $sth->bindParam(':user_id',$user_id);
+    $sth->bindParam(':user_id',$this->User);
     $sth->execute();
   }
 //プロフィール画像パスを出力
@@ -60,7 +60,7 @@ Class apex_users extends Db{
     $sql = 'SELECT prof_img_path FROM users';
     $sql = ' WHERE user_id = :user_id';
     $sth = $this->dbh->prepare($sql);
-    $sth->bindParam(':user_id',$user_id);
+    $sth->bindParam(':user_id',$this->User);
     $sth->execute();
     $prof_img_path = $sth->fetch(PDO::FETCH_ASSOC);
     return $prof_img_path;

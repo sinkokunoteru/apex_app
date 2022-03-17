@@ -1,3 +1,8 @@
+<?php
+  require_once(ROOT_PATH.'Controllers/apex_users_controller.php');
+  $user = new apex_users_controller();
+  $img_path = $user->Get_user_prof_img();
+ ?>
 <!DOCTYPE html>
 <html lang="ja">
  <head>
@@ -11,7 +16,11 @@
   <header>
     <?php   include(ROOT_PATH.'Views/design/header.php'); ?>
   </header>
-  <img src="">
+  <div class="prof_block">
+    <div class="prof_img">
+      <img class="profiel_img" src="<?=$img_path ?>">
+    </div>
+  </div>
   <a href="prof_img_form.php">プロフィール画像の変更</a>
   <p>@user_id</p>
 

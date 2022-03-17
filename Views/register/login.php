@@ -1,32 +1,23 @@
 <!DOCTYPE html>
 <html lang="ja">
- <head>
- <meta charset="utf-8">
- <title>login_form</title>
- <meta name="description" content="サイトキャプションを入力">
- <meta name="keywords" content="サイトキーワードを,で区切って入力">
- <link rel="stylesheet" href="sample.css">
-
- <script src="sample.js"></script>
- </head>
-
- <body>
- <!----- ヘッダー ----->
- <header>ヘッダー</header>
- <nav>ナビ</nav>
- <!----- ヘッダー END ----->
-
- <!----- メインコンテンツ ----->
-<form action="login_check.php" method="post">
-  <p>メールアドレス</p>
-  <input type = "text" name = "email">
-  <p>パスワード</p>
-  <input type = "text" name = "password">
- <!----- メインコンテンツ END ----->
-  <input type = "submit" value ="ログイン">
-</form>
- <!----- フッター ----->
- <footer>フッター</footer>
- <!----- フッター END ----->
- </body>
+  <head>
+    <meta charset="utf-8">
+    <title>login_form</title>
+    <meta name="description" content="サイトキャプションを入力">
+    <meta name="keywords" content="サイトキーワードを,で区切って入力">
+    <link rel="stylesheet" href="../css/login.css">
+    <script src="sample.js"></script>
+  </head>
+  <body>
+    <form action="login_check.php" method="post">
+      <div class="input_form">
+        <p>メールアドレス</p>
+        <input type="text" name="email" placeholder="xxxxx@ijohoa.com">
+        <p>パスワード</p>
+        <input type="text" name="password" placeholder="xxxxxxxxxxxxx"><br>
+        <input type="submit" value="ログイン">
+      </div>
+    </form>
+    <footer>フッター</footer>
+  </body>
 </html>
