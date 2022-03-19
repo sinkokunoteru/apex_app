@@ -86,7 +86,6 @@ class clips_controller {
 
   //セッションに入っているデータ・ベースに登録する値を返す
   public function get_clips_regist_data(){
-    session_start();
     $clips_regist_data['user_id'] = $_SESSION['user_id'];
     $clips_regist_data['display_data'] = $_SESSION['display_url'];
     $clips_regist_data['post_comment'] = $_SESSION['post_comment'];

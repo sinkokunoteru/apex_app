@@ -1,47 +1,50 @@
 <?php
   require_once(ROOT_PATH.'Controllers/apex_users_controller.php');
+  require_once(ROOT_PATH.'Controllers/clips_controller.php');
   $con = new apex_users_controller();
+  $user_clips=$con->Get_all_clips();
 ?>
 <!DOCTYPE html>
 <html lang="ja">
   <head>
-     <meta charset="utf-8">
-     <title>apex-legends_home</title>
-     <meta name="description" content="サイトキャプションを入力">
-     <meta name="keywords" content="サイトキーワードを,で区切って入力">
-     <link rel="stylesheet" href="../css/home.css">
-     <script src="sample.js"></script>
+    <meta charset="utf-8">
+    <title>apex-legends_clips</title>
+    <meta name="description" content="サイトキャプションを入力">
+    <meta name="keywords" content="サイトキーワードを,で区切って入力">
+    <link rel="stylesheet" href="../css/clips.css">
   </head>
-
   <body>
     <header>
       <?php   include(ROOT_PATH.'Views/design/header.php'); ?>
     </header>
-  <nav>ナビ</nav>
+    <div class="view_clips_block">
+      <?php foreach($user_clips as $clips):?>
+        <div class="contribute">
+          <div class="clips_header">
+            <div class="contribute_user">
+              <img src="../img/design_img/test.jpg">
+              <div class="name_and_comment">
+                <p class="contributer_name">sinkokunoteru</p>
+                <p class="contributer_name"><?= $clips['comment']?></p>
+              </div>
+            </div>
 
-<?php foreach($users as $user): ?>
-  <p><?= $user['name'] ?></p>
-  <p><?= $scripts->age_calculate($user['birth']) ?></p>
-<?php endforeach; ?>
-<div class="main-profiel-block">
-  <div class="home-img-position">
-    <img class="circle" src="../img/design_img/test.jpg">
-  </div>
-  <p class="photo-bottom-user-information">
-    名前が入ります、年齢が入ります
-  </p>
-  <p class="photo-child-information">ユーザーのランクが入ります</p>
-  <p class="photo-child-information">おおよその週にプレイする時間数が出ます</p>
-</div>
+          </div>
+          <div class="contribute_movie">
+            <?= $clips['video_name']?>
+          </div>
+        </div>
+      <?php endforeach; ?>
+    </div>
 
-<div class="like-button">
+    <div class="like-button">
 
-</div>
-<a href=""></a>
- <!----- フッター ----->
- <footer>
-   <?php include(ROOT_PATH.'Views/design/footer.php'); ?>
- </footer>
- <!----- フッター END ----->
- </body>
+    </div>
+    <div class="page_num">
+      <?php include(ROOT_PATH.'Views/design/page_count.php'); ?>
+    </div>
+    <footer>
+      <?php include(ROOT_PATH.'Views/design/footer.php'); ?>
+    </footer>
+  </body>
 </html>

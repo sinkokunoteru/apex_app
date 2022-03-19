@@ -20,15 +20,15 @@ $ary_datas= $clips->return_clips_confirm_data();
 		<form action="clips_form_complete.php" method="post">
 			<p>この内容で投稿してよろし？</p><br>
 			<!-- URLと動画を出力 -->
-			<p><?php echo $_POST['post_url']?></p><br>
-			<div><?php echo $ary_datas['display_url'];?></div>
+			<p><?= $_POST['post_url']?></p><br>
+			<div><?= $ary_datas['display_url'];?></div>
 			<!-- URLと動画ここまで -->
 			<!-- コメントの出力 -->
 			<?php
 			if($ary_datas["post_comment"] != null) {
 				echo '<p>一言コメント</p><br>';
 				echo '<p>'.$ary_datas["post_comment"].'</p><br>';
-			}else if($ary_datas["post_comment"] == null) {
+			}else if(empty($ary_datas["post_comment"])) {
 				echo '<p>コメントは空です</p>';
 			}
 			?>

@@ -12,7 +12,7 @@
    <div class = "header_box">
      <div><a href="http://localhost/main/home.php"><img src ="../img/design_img/apex-logo-F74B0C9FCD-seeklogo.com.png"></a></div>
      <div><a href="http://localhost/profiel/prof_main.php">home</a></div>
-     <div><a href="http://localhost/clips/clips_form.php">clips</a></div>
+     <div><a href="http://localhost/clips/clips.php">clips</a></div>
      <div><a href="http://localhost/favorites/favorites.php">likes</a></div>
      <div ><input type ="button" value ="三" onclick="buttonClick()"id="hamburger"></div>
    </div>

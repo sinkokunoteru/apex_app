@@ -10,6 +10,29 @@ article {
 	-webkit-border-radius: 6px;
 	-moz-border-radius: 6px;
 }
-div {
+
+article div {
 	text-align: center;
+}
+
+.view_clips_block {
+	width: 80%;
+	margin: auto 100px;
+	padding: 30px;
+	border-radius: 10px;
+}
+
+.contribute_user {
+	display: flex;
+}
+
+.contribute_user img {
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	object-fit: cover;
+}
+
+.contribute {
+	margin-bottom: 30px
 }
